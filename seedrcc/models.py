@@ -331,9 +331,9 @@ class AddTorrentResult(_BaseModel):
     """Represents the result of adding a torrent."""
 
     result: bool
-    user_torrent_id: int
-    title: str
-    torrent_hash: str
+    user_torrent_id: Optional[int] = None
+    title: Optional[str] = None
+    torrent_hash: Optional[str] = None
     code: Optional[int] = None
 
 
