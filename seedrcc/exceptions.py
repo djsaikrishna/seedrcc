@@ -31,6 +31,7 @@ class APIError(SeedrError):
                 if isinstance(data, dict):
                     self.code = data.get("code")
                     self.error_type = data.get("result")
+                    default_message = data.get("error") or default_message
 
             except json.JSONDecodeError:
                 pass
